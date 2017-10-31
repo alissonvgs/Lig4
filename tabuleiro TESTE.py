@@ -155,7 +155,7 @@ while ( vitoria == False):
             print("Coluna já está preechida, tente outra.\n")
             tratamentoErro = 0
             
-    #------ Checagem em horiontal -----------
+    #------ Checagem em horizontal -----------
 
         for i in range(len(tabela)):
             if ((i + salto) > limiteColuna):
@@ -190,7 +190,7 @@ while ( vitoria == False):
                 contO += 4
 
                     
-   #------ Checagem em diagonal \  --------------
+   #------ Checagem em diagonal \ / --------------
 
         for i in range(len(listaPossiveisEscolhas)):
             for j in range(i, len(tabela), 7 + i):
@@ -199,7 +199,8 @@ while ( vitoria == False):
                          tabela[j + ( 7 - i )] == "X" and tabela[j + ( 14 - i ) + 1] == "X" and tabela[j + ( 21 - i ) + 2] == "X" and tabela[j + ( 28 - i ) + 3] == "X"):
                         contX += 4
                 else:
-                    if ( tabela[j] == "X" and tabela[j - ( 7 + i ) - 1] == "X" and tabela[j - ( 14 + i) - 2] == "X" and tabela[j - (21 + i ) - 3] == "X"):
+                    if ( tabela[j] == "X" and tabela[j + 7 - (7 - i )] == "X" and tabela[j + 14 - (7 + 1 - i )] == "X" and tabela[j + 21 - (7 + 2- i )] == "X" or
+                         tabela[j + 7 - (7 - i)] == "X" and tabela[j + 14 - (7 + 1 - i )] == "X" and tabela[j + 21 - (7 + 2 - i )] == "X" and tabela[j + 28 - (7 + 3 - i )] == "X"):
                         contX += 4
 
 
