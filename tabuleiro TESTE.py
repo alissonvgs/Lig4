@@ -194,14 +194,13 @@ while ( vitoria == False):
 
         for i in range(len(listaPossiveisEscolhas)):
             for j in range(i, len(tabela), 7 + i):
-                if ((j + (21 - i ) + 3  ) <= 41 ):
+                if ((j + (28 - i ) + 3  ) <= 41 ):
                     if ( tabela[j] == "X" and tabela[j + ( 7 - i ) + 1] == "X" and tabela[j + ( 14 - i) + 2] == "X" and tabela[j + (21 - i ) + 3] == "X" or
-                         tabela[j + ( 7 - i ) + 1] == "X" and tabela[j + ( 14 - i) + 2] == "X" and tabela[j + (21 - i ) + 3] == "X" and tabela[j + (28 - i ) + 4] == "X"):
+                         tabela[j + ( 7 - i )] == "X" and tabela[j + ( 14 - i ) + 1] == "X" and tabela[j + ( 21 - i ) + 2] == "X" and tabela[j + ( 28 - i ) + 3] == "X"):
                         contX += 4
-                    else:
-                        if ( tabela[j] == "X" and tabela[j - ( 7 + i ) - 1] == "X" and tabela[j - ( 14 + i) - 2] == "X" and tabela[j - (21 + i ) - 3] == "X" or
-                             tabela[j - ( 7 + i ) - 1] == "X" and tabela[j - ( 14 + i) - 2] == "X" and tabela[j - (21 + i ) - 3] == "X" and tabela[j - (28 + i) - 4] == "X"):
-                            contX += 4
+                else:
+                    if ( tabela[j] == "X" and tabela[j - ( 7 + i ) - 1] == "X" and tabela[j - ( 14 + i) - 2] == "X" and tabela[j - (21 + i ) - 3] == "X"):
+                        contX += 4
 
 
 
